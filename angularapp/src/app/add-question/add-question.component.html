@@ -1,0 +1,47 @@
+<form [formGroup]="questionForm" (ngSubmit)="addNewQuestion()">
+  <table>
+    <tr>
+      <td>Question number :</td>
+      <td><input class="form-control" type="number" placeholder="Enter number" formControlName="number"></td>
+      <div *ngIf="questionForm.get('number')!.invalid && questionForm.get('number')!.touched">
+        <div *ngIf="questionForm.get('number')!.hasError('number')">Question Number is required.</div>
+      </div>  
+    </tr>
+    <tr>
+      <td>Question Topic</td>
+      <td><input class="form-control" type="text" placeholder="Enter topic" formControlName="topic"></td>
+      <div *ngIf="questionForm.get('topic')!.invalid && questionForm.get('topic')!.touched">
+        <div *ngIf="questionForm.get('topic')!.hasError('topic')">Question topic is required.</div>
+      </div>
+    </tr>
+    <tr>
+      <td>Question content :</td>
+      <td><input class="form-control" type="text" placeholder="Enter content" formControlName="content"></td>
+      <div *ngIf="questionForm.get('content')!.invalid && questionForm.get('content')!.touched">
+        <div *ngIf="questionForm.get('content')!.hasError('content')">Question Content is required.</div>
+      </div>
+    </tr>
+    <tr>
+      <td>Question answer:</td>
+      <td><input class="form-control" type="text" placeholder="Enter answer" formControlName="answer"></td>
+      <div *ngIf="questionForm.get('answer')!.invalid && questionForm.get('answer')!.touched">
+        <div *ngIf="questionForm.get('answer')!.hasError('answer')">Question Answer is required.</div>
+        <div *ngIf="questionForm.get('answer')!.hasError('maxlength')">Answer cannot exceed 50 characters.</div>
+      </div>    
+    </tr>
+    <tr>
+      <td>Question Marks:</td>
+      <td><input class="form-control" type="number" placeholder="Enter marks" formControlName="marks"></td>
+      <div *ngIf="questionForm.get('marks')!.invalid && questionForm.get('marks')!.touched">
+        <div *ngIf="questionForm.get('marks')!.hasError('marks')">Question Marks is required.</div>
+      </div>  
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button class="btn btn-danger" type="submit" [disabled]="questionForm.invalid">Add question</button>
+      </td>
+    </tr>
+  </table>
+</form>
+
+  

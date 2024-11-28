@@ -1,0 +1,25 @@
+<!-- question-list.component.html -->
+<table>
+  <thead>
+    <tr>
+      <th>Question Number</th>
+      <th>TOPIC</th>
+      <th>Content</th>
+      <th>ANSWER</th>
+      <th>MARKS</th>
+      <!-- Include a column for Delete button if needed -->
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let question of questions">
+      <td>{{ question.number }}</td>
+      <td>{{ question.topic }}</td>
+      <td>{{ question.content }}</td>
+      <td>{{ question.answer }}</td>
+      <td>{{ question.marks }}</td>
+      <!-- Include a cell for Delete button if needed -->
+      <td><button (click)="deleteQuestion(question.id)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
