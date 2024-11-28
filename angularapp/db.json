@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "number": 12,
+      "topic": "Java",
+      "content": "Explain OOPS concepts",
+      "answer": "OOPS is object oriented programming language",
+      "marks": "100"
+    },
+    {
+      "id": 2,
+      "number": 13,
+      "topic": "Java",
+      "content": "Explain interface",
+      "answer": "Interface in java comes under abstraction",
+      "marks": "100"
+    },
+    {
+      "number": 14,
+      "topic": "MySQL",
+      "content": "What is relational database",
+      "answer": "set of rows and columns",
+      "marks": "100",
+      "id": 3
+    }
+  ]
+}
